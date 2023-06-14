@@ -21,7 +21,13 @@ const bicycle=[
     },
 ];
 
+let minWeight=999;
 for(let i=0;i<bicycle.length;i++){
-    const minWeight = Math.floor(Math.min (bicycle[i]));
-    console.log(minWeight)
-}
+const weight=bicycle[i].weight
+    if(minWeight>weight){
+        minWeight=weight
+    }
+    if(bicycle[i].weight===weight)
+    console.log(bicycle[i])
+};
+console.log(minWeight)
