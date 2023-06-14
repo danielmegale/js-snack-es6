@@ -22,12 +22,13 @@ const bicycle=[
 ];
 
 let minWeight=999;
+let lightestBike;
 for(let i=0;i<bicycle.length;i++){
-const weight=bicycle[i].weight
+const weight=bicycle[i].weight;
     if(minWeight>weight){
-        minWeight=weight
+        minWeight=weight;
+        lightestBike=bicycle[i];
     }
-    if(bicycle[i].weight===weight)
-    console.log(bicycle[i])
 };
+console.log(lightestBike)
 console.log(minWeight)

@@ -1,7 +1,7 @@
 const teams=[
     {
         nome:'Juventus',
-        puntiFatti:0,
+        puntiFatti:655,
         falliSubiti:0,     
     },
     {
@@ -20,3 +20,22 @@ const teams=[
         falliSubiti:0,
     },
 ]
+const points=[]
+function random(puntiFatti,falliSubiti) {
+    const random=Math.floor(Math.random()*100)+1
+    return random
+}
+for(let i=0;i<teams.length;i++){
+    teams[i].puntiFatti=random();
+    teams[i].falliSubiti=random();
+    const {nome,falliSubiti}=teams[i];
+    points.push(
+        {
+            nome:nome,
+            falliSubiti:falliSubiti   
+        },
+    )
+};
+
+console.log(teams);
+console.log(points);
